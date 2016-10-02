@@ -1,0 +1,29 @@
+#Kullanıcı Adı ve Parola Kontrolü ve Şifre Değiştirme Scripti
+
+print("Programımıza Hoşgeldiniz")
+print("Giriş yapabilmek için belirtilen kullanıcı adı ve parolayı girin")
+print("Kullanıcı Adı: Admin, Parola: 1234")
+
+defkullanici ="Admin"
+defparola ="1234"
+
+while (True): #İşlem başarısız olursa dögüyü başa sarar, tekrar ilk işleme döner.
+    kullanici = input("Kullanıcı Adınız:")
+    parola = input("Parolanız:")
+    if ((kullanici == defkullanici) and (parola == defparola)): 
+        print("Hoşgeldiniz",kullanici)
+        break #Döngü sona erdi...
+    elif ((kullanici != defkullanici) and (parola == defparola)):
+        print("Kullanıcı Adınızı Yanlış Girdiniz")
+    elif ((kullanici == defkullanici) and (parola != defparola)):
+        print("Şifrenizi mi unuttunuz?")
+        print("Şifreyi değiştirmek ister misiniz?(Y/N)") #"Y" seçerek şifreyi değiştirin
+        cevap = input()
+
+        yeniparola = input("Yeni Parola:")
+        print("Lütfen Bekleyin")
+        defparola = yeniparola #belirtilen parolayı kullanıcının belirttiği yeni parola ile değiştirme
+        print("Şifreniz Başarıyla Değiştirildi")
+
+    else:
+        print("Tekrar Deneyin")
